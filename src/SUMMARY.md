@@ -1,0 +1,87 @@
+# Summary
+
+- [Ultiscore Documentation](./index.md)
+
+- [**Welcome to Ultiscore!**](./welcome-to-ultiscore/README.md)
+
+  - [Overview of Ultiscore](./welcome-to-ultiscore/overview.md)
+  - [What's New?](./welcome-to-ultiscore/whats-new.md)
+  - [Getting Help & Support](./welcome-to-ultiscore/getting-help.md)
+
+- [**General Platform Guide**](./general-platform-guide/README.md)
+
+  - [Account Management](./general-platform-guide/account-management/README.md)
+    - [Signing Up](./general-platform-guide/account-management/signing-up.md)
+    - [Logging In & Out](./general-platform-guide/account-management/logging-in.md)
+    - [Password Recovery / Reset](./general-platform-guide/account-management/password-recovery.md)
+    - [Managing Your Profile & Settings](./general-platform-guide/account-management/managing-profile.md)
+  - [Dashboard Overview](./general-platform-guide/dashboard-overview.md)
+  - [Understanding User Roles](./general-platform-guide/user-roles.md)
+  - [Basic Navigation & Interface](./general-platform-guide/basic-navigation.md)
+  - [Frequently Asked Questions (General)](./general-platform-guide/faq-general.md)
+
+- [**Tournament Directors (TDs)**](./tournament-directors/README.md)
+
+  - [Getting Started as a TD](./tournament-directors/getting-started-td.md)
+  - [TD Dashboard Overview](./tournament-directors/td-dashboard-overview.md) <!-- Specific to TD view -->
+  - [**Event Creation & Setup**](./tournament-directors/event-creation-setup/README.md)
+    - [Creating Your First Event (Step-by-Step)](./tournament-directors/event-creation-setup/creating-first-event.md)
+    - [Event Settings & Configuration (Detailed)](./tournament-directors/event-creation-setup/event-settings-configuration.md)
+    - [Managing Event Status (Draft, Published, etc.)](./tournament-directors/event-creation-setup/managing-event-status.md)
+    - [Editing or Deleting Events](./tournament-directors/event-creation-setup/editing-deleting-events.md)
+  - [**Team Management**](./tournament-directors/team-management/README.md)
+    - [Adding & Importing Teams](./tournament-directors/team-management/adding-importing-teams.md)
+    - [Managing Team Rosters](./tournament-directors/team-management/managing-team-rosters.md)
+    - [Team Self-Registration Workflow](./tournament-directors/team-management/team-self-registration.md)
+    - [Viewing Team Details](./tournament-directors/team-management/viewing-team-details.md)
+  - [**Game Format & Scheduling**](./tournament-directors/game-format-scheduling/README.md)
+    - [Choosing a Game Format](./tournament-directors/game-format-scheduling/choosing-game-format.md)
+    - [Setting Up Pools & Divisions](./tournament-directors/game-format-scheduling/setting-up-pools-divisions.md)
+    - [Automatic Schedule Generation](./tournament-directors/game-format-scheduling/automatic-schedule-generation.md)
+    - [Manual Scheduling & Adjustments](./tournament-directors/game-format-scheduling/manual-scheduling-adjustments.md)
+    - [Assigning Fields & Venues](./tournament-directors/game-format-scheduling/assigning-fields-venues.md)
+  - [**Player Management (TD Perspective)**](./tournament-directors/player-management/README.md)
+    - [Viewing All Registered Players](./tournament-directors/player-management/viewing-all-players.md)
+    - [Managing Player Registrations & Approvals](./tournament-directors/player-management/managing-player-registrations.md)
+    - [Bulk Actions for Players](./tournament-directors/player-management/bulk-actions-players.md)
+  - [**In-Event Management**](./tournament-directors/in-event-management/README.md)
+    - [Score & Spirit Score Oversight](./tournament-directors/in-event-management/score-spirit-oversight.md)
+    - [Verifying & Correcting Scores](./tournament-directors/in-event-management/verifying-correcting-scores.md)
+    - [Managing MVP Nominations/Selections](./tournament-directors/in-event-management/managing-mvp.md)
+    - [Live Event Monitoring Tools](./tournament-directors/in-event-management/live-event-monitoring.md)
+  - [**Communication Tools for TDs**](./tournament-directors/communication-tools/README.md)
+    - [Sending Announcements to Participants](./tournament-directors/communication-tools/sending-announcements.md)
+  - [**Reporting & Analytics for TDs**](./tournament-directors/reporting-analytics/README.md)
+    - [Available Reports & How to Generate Them](./tournament-directors/reporting-analytics/available-reports.md)
+  - [Frequently Asked Questions (TD)](./tournament-directors/faq-td.md)
+
+- [**Score Keepers**](./score-keepers/README.md)
+
+  - [Getting Started as a Score Keeper](./score-keepers/getting-started-sk.md)
+  - [Score Keeper Dashboard / Accessing Games](./score-keepers/sk-dashboard-accessing-games.md)
+  - [**Keeping Score (Live)**](./score-keepers/keeping-score-live/README.md)
+    - [Starting & Ending a Game](./score-keepers/keeping-score-live/starting-ending-game.md)
+    - [Recording Points & Game Events](./score-keepers/keeping-score-live/recording-points-events.md)
+    - [Using the Score Keeping Interface](./score-keepers/keeping-score-live/interface-guide.md)
+    - [Handling Timeouts & Halftime](./score-keepers/keeping-score-live/timeouts-halftime.md)
+  - [**Submitting Spirit Scores**](./score-keepers/submitting-spirit-scores/README.md)
+    - [Submitting Spirit Scores](./score-keepers/submitting-spirit-scores/how-to-submit.md)
+    - [Understanding Spirit Score Categories](./score-keepers/submitting-spirit-scores/understanding-categories.md)
+  - [Troubleshooting Common Score Keeping Issues](./score-keepers/troubleshooting-sk.md)
+  - [Frequently Asked Questions (Score Keepers)](./score-keepers/faq-sk.md)
+
+- [**Players**](./players/README.md)
+
+  - [Getting Started as a Player](./players/getting-started-player.md)
+  - [Finding Tournaments & Events](./players/finding-tournaments.md)
+  - [Viewing Schedules, Scores & Standings](./players/viewing-schedules-scores.md)
+  - [Understanding Your Player Profile & Stats](./players/player-profile-stats.md)
+  - [Joining a Team](./players/joining-a-team.md)
+  - [Frequently Asked Questions (Players)](./players/faq-player.md)
+
+- [**Advanced Topics & Integrations**](./advanced-topics/README.md)
+
+  - [API Usage Guide (Coming soon)](./advanced-topics/api-usage.md)
+  - [Custom Branding Options (Coming soon)](./advanced-topics/custom-branding.md)
+
+- [Glossary of Terms](./glossary.md)

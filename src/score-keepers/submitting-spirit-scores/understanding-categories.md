@@ -1,0 +1,1 @@
+# Understanding Spirit Score Categories

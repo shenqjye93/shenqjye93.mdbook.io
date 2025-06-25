@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="robots" content="noindex, nofollow"> <!-- ADD THIS LINE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="mdBook">
+    {{#if description}}
+    <meta name="description" content="{{description}}">
+    {{/if}}
+    {{#if config.output.html.favicon}}
+    <link rel="icon" href="{{root_path}}{{config.output.html.favicon}}">
+    {{else}}
+    <link rel="icon" href="{{root_path}}favicon.svg">
+    {{/if}}
+    <!-- Other head content -->
+</head>

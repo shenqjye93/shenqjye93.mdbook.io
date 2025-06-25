@@ -1,0 +1,13 @@
+[book]
+authors = ["Ultiscore"]
+language = "en"
+src = "src"
+title = "Ultiscore Documentation"
+
+[output.html]
+theme = "theme"
+fold = { enable = true, level = 0}
+favicon = "favicon.png"
+additional-css = ["theme/custom.css"]
+
+default-theme = "light"
