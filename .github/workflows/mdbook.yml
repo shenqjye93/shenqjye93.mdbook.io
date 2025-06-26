@@ -44,6 +44,9 @@ jobs:
         run: mdbook build
       - name: Remove .html extensions
         run: |
+          find docs -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\1"/g' {} \;
+          find docs -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\1#\2"/g' {} \;
+
           find docs -name "*.html" -not -name "index.html" | while read file; do
             dir="${file%.html}"
             mkdir -p "$dir"
