@@ -11,3 +11,6 @@ favicon = "favicon.png"
 additional-css = ["theme/custom.css"]
 
 default-theme = "light"
+
+[build]
+build-dir = "docs"
