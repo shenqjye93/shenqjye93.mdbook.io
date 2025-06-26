@@ -81,16 +81,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Rust and mdbook
-        uses: actions-rs/toolchain@v1
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
-          components: rustc, cargo
-          override: true
-      - run: cargo install mdbook --locked
+          # We don't need components like clippy or rustfmt, saving time.
+          # The action will install rustc and cargo by default.
+          components: ""
+
+      # Install mdbook using cargo
+      - name: Install mdbook
+        run: cargo install mdbook --locked
 
       - name: Build the book
-        # This step directly runs mdbook, which will read your book.toml
         run: mdbook build
 
       - name: Upload GitHub Pages artifact
