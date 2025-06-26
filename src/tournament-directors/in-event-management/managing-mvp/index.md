@@ -1,1 +1,0 @@
-# Managing MVP Nominations/Selections

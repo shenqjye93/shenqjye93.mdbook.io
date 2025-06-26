@@ -1,1 +1,0 @@
-# Score & Spirit Score Oversight

@@ -5,7 +5,6 @@ src = "src"
 title = "Ultiscore Documentation"
 
 [output.html]
-clean-urls = true
 site-url = "/shenqjye93.mdbook.io/"
 theme = "theme"
 fold = { enable = true, level = 0}
