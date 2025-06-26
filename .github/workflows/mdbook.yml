@@ -42,17 +42,10 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: mdbook build
-      - name: Remove .html extensions
-        run: |
-          find docs -name "*.html" -not -name "index.html" | while read file; do
-            dir="${file%.html}"
-            mkdir -p "$dir"
-            mv "$file" "$dir/index.html"
-          done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ./book
 
   # Deployment job
   deploy:
