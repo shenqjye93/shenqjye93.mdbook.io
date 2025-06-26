@@ -11,3 +11,4 @@ favicon = "favicon.png"
 additional-css = ["theme/custom.css"]
 
 default-theme = "light"
+clean-url = true
