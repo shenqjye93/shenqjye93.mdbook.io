@@ -94,6 +94,15 @@ jobs:
         run: cargo install mdbook --locked
       - name: Build the book
         run: mdbook build
+              - name: Generate clean URLs
+        run: |
+          if [ -f docs/toc.js ]; then
+            perl -i -p -e 's{href="index.html"}{href="."}g' docs/toc.js
+            perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g' docs/toc.js
+          fi
+          
+          find docs/ -name "*.html" | xargs perl -i -p -e 's{href="index.html"}{href="."}g'
+          find docs/ -name "*.html" | xargs perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
