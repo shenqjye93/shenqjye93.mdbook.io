@@ -8,6 +8,6 @@ title = "Ultiscore Documentation"
 theme = "theme"
 fold = { enable = true, level = 0}
 favicon = "favicon.png"
-additional-css = ["theme/custom.css"]
+
 
 default-theme = "light"
