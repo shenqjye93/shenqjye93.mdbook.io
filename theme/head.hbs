@@ -13,4 +13,9 @@
     <link rel="icon" href="{{root_path}}favicon.svg">
     {{/if}}
     <!-- Other head content -->
+    <script>
+        if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+        window.history.replaceState(null, null, window.location.pathname.slice(0, -5));
+        }
+    </script>
 </head>
