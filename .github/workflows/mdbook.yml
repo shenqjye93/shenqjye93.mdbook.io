@@ -44,12 +44,14 @@ jobs:
         run: mdbook build
       - name: Remove .html extensions
         run: |
-          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\1\/"/g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\1\/#\2"/g' {} \;
+          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\1"/g' {} \;
+          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\1#\2"/g' {} \;
 
-          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\/\/"/href="\1\/"/g' {} \;
-
-          find book -name "*.html" -exec sed -i 's/href="index\/"/href="\/"/g' {} \;
+          find book -name "*.html" -not -name "index.html" | while read file; do
+            dir="${file%.html}"
+            mkdir -p "$dir"
+            mv "$file" "$dir/index.html"
+          done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
