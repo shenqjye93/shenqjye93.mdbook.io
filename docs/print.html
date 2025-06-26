@@ -16,6 +16,11 @@
             <meta name="generator" content="mdBook">
             <link rel="icon" href="favicon.svg">
             <!-- Other head content -->
+            <script>
+                if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+                window.history.replaceState(null, null, window.location.pathname.slice(0, -5));
+                }
+            </script>
         </head>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +42,7 @@
         <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/custom.css">
 
 
         <!-- Provide site root and default themes to javascript -->
