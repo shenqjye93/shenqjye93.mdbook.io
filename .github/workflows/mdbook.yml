@@ -42,38 +42,38 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: mdbook build
-      - name: Remove .html extensions and fix links
-        run: |
-          # First, convert all relative paths to absolute paths from root
-          find book -name "*.html" -exec sed -i 's/href="\.\.\/\.\.\//href="\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="\.\.\/"/href="\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="\.\//href="\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="\.\.\/\.\.\//src="\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="\.\.\/"/src="\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="\.\//src="\//g' {} \;
+      # - name: Remove .html extensions and fix links
+      #   run: |
+      #     # First, convert all relative paths to absolute paths from root
+      #     find book -name "*.html" -exec sed -i 's/href="\.\.\/\.\.\//href="\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/href="\.\.\/"/href="\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/href="\.\//href="\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="\.\.\/\.\.\//src="\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="\.\.\/"/src="\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="\.\//src="\//g' {} \;
 
-          # Remove .html extensions from internal links
-          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\1"/g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\1#\2"/g' {} \;
+      #     # Remove .html extensions from internal links
+      #     find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\1"/g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\1#\2"/g' {} \;
 
-          # Fix any remaining relative asset paths to be absolute
-          find book -name "*.html" -exec sed -i 's/href="css\//href="\/css\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="css\//src="\/css\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="FontAwesome\//href="\/FontAwesome\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="FontAwesome\//src="\/FontAwesome\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/href="highlight\.js\//href="\/highlight\.js\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="highlight\.js\//src="\/highlight\.js\//g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="clipboard\.min\.js"/src="\/clipboard\.min\.js"/g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="book\.js"/src="\/book\.js"/g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="searcher\.js"/src="\/searcher\.js"/g' {} \;
-          find book -name "*.html" -exec sed -i 's/src="mark\.min\.js"/src="\/mark\.min\.js"/g' {} \;
+      #     # Fix any remaining relative asset paths to be absolute
+      #     find book -name "*.html" -exec sed -i 's/href="css\//href="\/css\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="css\//src="\/css\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/href="FontAwesome\//href="\/FontAwesome\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="FontAwesome\//src="\/FontAwesome\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/href="highlight\.js\//href="\/highlight\.js\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="highlight\.js\//src="\/highlight\.js\//g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="clipboard\.min\.js"/src="\/clipboard\.min\.js"/g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="book\.js"/src="\/book\.js"/g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="searcher\.js"/src="\/searcher\.js"/g' {} \;
+      #     find book -name "*.html" -exec sed -i 's/src="mark\.min\.js"/src="\/mark\.min\.js"/g' {} \;
 
-          # Then restructure files (skip index.html files)
-          find book -name "*.html" -not -name "index.html" | while read file; do
-            dir="${file%.html}"
-            mkdir -p "$dir"
-            mv "$file" "$dir/index.html"
-          done
+      #     # Then restructure files (skip index.html files)
+      #     find book -name "*.html" -not -name "index.html" | while read file; do
+      #       dir="${file%.html}"
+      #       mkdir -p "$dir"
+      #       mv "$file" "$dir/index.html"
+      #     done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
