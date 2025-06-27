@@ -142,16 +142,14 @@ jobs:
         run: mdbook build
       - name: Fix internal links for clean URLs
         run: |
-          # Update internal links to use clean URLs (remove .html extensions)
-          find docs -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\/\1\/"/g' {} \;
-          find docs -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\/\1\/#\2"/g' {} \;
+          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html"/href="\/\1\/"/g' {} \;
+          find book -name "*.html" -exec sed -i 's/href="\([^"]*\)\.html#\([^"]*\)"/href="\/\1\/#\2"/g' {} \;
           
-          # Fix root index references
-          find docs -name "*.html" -exec sed -i 's/href="\/index\/"/href="\/"/g' {} \;
+          find book -name "*.html" -exec sed -i 's/href="\/index\/"/href="\/"/g' {} \;
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ./book
 
   # Deployment job
   deploy:
