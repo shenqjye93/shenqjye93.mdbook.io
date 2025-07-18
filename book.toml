@@ -6,9 +6,9 @@ title = "Ultiscore Documentation"
 
 [output.html]
 default-theme = "light"
-site-url = "/shenqjye93.mdbook.io/"
+preferred-dark-theme = "light"
+clean-urls = true
 theme = "theme"
 fold = { enable = true, level = 0}
 favicon = "favicon.png"
 additional-css = ["theme/custom.css"]
-clean-urls = true
