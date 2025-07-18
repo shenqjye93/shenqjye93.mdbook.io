@@ -1,1 +1,0 @@
-# Sending Announcements to Participants

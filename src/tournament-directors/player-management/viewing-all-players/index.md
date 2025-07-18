@@ -1,1 +1,0 @@
-# Viewing All Registered Players

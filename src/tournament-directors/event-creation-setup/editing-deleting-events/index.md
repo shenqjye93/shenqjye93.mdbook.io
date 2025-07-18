@@ -1,1 +1,0 @@
-# Editing or Deleting Events

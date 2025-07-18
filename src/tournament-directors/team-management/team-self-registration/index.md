@@ -1,1 +1,0 @@
-# Team Self-Registration Workflow
