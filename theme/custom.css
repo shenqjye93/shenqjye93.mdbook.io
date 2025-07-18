@@ -3,7 +3,11 @@
  * Custom mdBook Menu Bar Styles
  * ==========================================================
  */
-
+:root {
+	--bg: white;
+	--fg: black;
+	/* Force light theme colors */
+}
 /* 1. Style the main menu bar container */
 .menu-bar {
 	background-color: rgb(
